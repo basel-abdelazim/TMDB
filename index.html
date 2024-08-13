@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cineverse</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #111;
+            color: #eee;
+        }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .movie-card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .movie-card img {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .movie-title {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        .movie-date {
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body>
     <div class="flex">
         <!-- Sidebar -->
         <div class="w-64 h-screen bg-black flex flex-col p-4">
             <!-- Spotify Logo -->
             <div class="mb-8">
-                <img src="logo.png" alt="Spotify Logo" class="h-100">
+                <img src="logo.png" alt=" Logo" class="h-50">
             </div>
+            
 
             <!-- Navigation Links -->
             <div class="space-y-4">
@@ -36,14 +66,14 @@
 
             <!-- Create Playlist -->
             <div class="bg-gray-800 p-4 rounded-lg mb-4">
-                <h3 class="text-lg font-semibold mb-2">Create your first playlist</h3>
+                <h3 class="text-lg font-semibold mb-2">Create your first watchlist</h3>
                 <p class="text-sm text-gray-400 mb-4">It's easy, we'll help you</p>
                 <button class="w-full bg-white text-black font-bold py-2 rounded-lg hover:bg-gray-200">Create Playlist</button>
             </div>
 
             <!-- Browse Podcasts -->
             <div class="bg-gray-800 p-4 rounded-lg">
-                <h3 class="text-lg font-semibold mb-2">Let's find some podcasts to follow</h3>
+                <h3 class="text-lg font-semibold mb-2">Let's find some Podcasts</h3>
                 <p class="text-sm text-gray-400 mb-4">We'll keep you updated on new episodes</p>
                 <button class="w-full bg-white text-black font-bold py-2 rounded-lg hover:bg-gray-200">Browse Podcasts</button>
             </div>
@@ -73,14 +103,16 @@
                     <span>English</span>
                 </button>
             </div>
-        </div>
-
-        <!-- Main Content Area -->
-        <div class="flex-grow p-8">
-            <!-- Main content goes here -->
+        
+    </div>
+    <div class="container mx-auto p-8">
+        <h2 class="text-3xl mb-8">favoriteMovies</h2>
+        <div id="movie-grid" class="movie-grid">
+            <!-- Movie cards will be inserted here by JavaScript -->
         </div>
     </div>
-    <script src="main.js"></script>
+    
 
+    <script src="main.js"></script>
 </body>
 </html>
