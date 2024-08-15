@@ -35,6 +35,17 @@
         }
     </style>
 </head>
+    header>
+    <div class="relative">
+        <input
+          id="search"
+          type="text"
+          placeholder="Search Movies..."
+          class="w-full ps-5 pe-10 py-2.5 rounded-lg bg-[#21242d] outline-none"
+        />
+        <i class="fa-solid fa-filter text-gray-400 absolute top-6 right"></i>
+      </div>
+</header>
 <body>
     <div class="flex">
         <!-- Sidebar -->
@@ -106,7 +117,7 @@
         
     </div>
     <div class="container mx-auto p-8">
-        <h2 class="text-3xl mb-8">favoriteMovies</h2>
+        <h2 class="text-3xl mb-8">popular movies</h2>
         <div id="movie-grid" class="movie-grid">
             <!-- Movie cards will be inserted here by JavaScript -->
         </div>
