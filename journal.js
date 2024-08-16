@@ -7,7 +7,7 @@ function displayFavorites() {
        const movieCard = `  
             <div class="bg-gray-800 p-4 rounded">
                 <h2>${movie.title || "add notes"}</h2>
-                <textarea id="notes-${movie.id}" placeholder="Add your notes here..." class="mt-2 p-2 w-full">${movie.notes || ''}</textarea>
+                <textarea id="notes-${movie.id}" placeholder="Add your notes here..." class="text-black mt-2 p-2 w-full">${movie.notes || ''}</textarea>
                 <button onclick="saveNotes(${movie.id})" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Save Notes</button>
             </div>
         `;  
